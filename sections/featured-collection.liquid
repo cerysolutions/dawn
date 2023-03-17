@@ -73,8 +73,8 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            data-cascade
             class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            data-cascade
           >
             {% render 'card-product',
               card_product: product,
@@ -88,7 +88,7 @@
           </li>
         {%- else -%}
           {%- for i in (1..4) -%}
-            <li data-cascade class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-cascade>
               {% render 'card-product', show_vendor: section.settings.show_vendor %}
             </li>
           {%- endfor -%}
