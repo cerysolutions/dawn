@@ -76,6 +76,7 @@
             <main-search>
               <form action="{{ routes.search_url }}" method="get" role="search" class="search">
                 <div class="field">
+                  abc
                   <input
                     class="search__input field__input"
                     id="Search-In-Template"
@@ -96,7 +97,7 @@
                       spellcheck="false"
                     {%- endif -%}
                   >
-                  <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+                  <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}jajjaj</label>
                   <input name="options[prefix]" type="hidden" value="last">
 
                   {%- if settings.predictive_search_enabled -%}
